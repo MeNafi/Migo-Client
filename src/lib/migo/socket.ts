@@ -3,7 +3,7 @@ import { io, type Socket } from "socket.io-client";
 import { API_ROOT, tokenStore } from "./api";
 
 let socket: Socket | null = null;
-
+ 
 /** Lazy Socket.IO client. Returns null when logged out. Fails silently (polling takes over). */
 export function getSocket(): Socket | null {
   if (typeof window === "undefined") return null;
