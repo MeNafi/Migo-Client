@@ -2,7 +2,7 @@
 import { create } from "zustand";
 import { tokenStore } from "./api";
 import { authService } from "./services";
-
+ 
 export const displayName = (u: any) => u?.profile?.fullName ?? u?.fullName ?? u?.email ?? "Rider";
 const pickUser = (d: any) => d?.user ?? d;
 
