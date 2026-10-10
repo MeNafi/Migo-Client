@@ -2,7 +2,7 @@
 import { AdminList } from "@/components/migo/admin-list";
 import { ActBtn } from "@/components/migo/admin-act";
 import { adminService, paymentService } from "@/lib/migo/services";
-
+ 
 export default function AdminPayments() {
   return <AdminList title="Payments" path="payments" actions={(o, k) => <>
     {o.status === "FAILED" && <ActBtn label="Retry" keyOf={k} fn={() => adminService.act(`payments/${o.id}/retry`)} />}
