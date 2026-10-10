@@ -1,5 +1,5 @@
 import { z } from "zod";
-
+ 
 const phone = z.string().regex(/^01\d{9}$/, "Use a Bangladeshi number like 01712345678");
 export const loginSchema = z.object({ email: z.string().email("Enter a valid email"), password: z.string().min(1, "Password is required") });
 export const registerSchema = z.object({
