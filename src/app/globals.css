@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@plugin "daisyui" { themes: false; logs: false; }
+@plugin "daisyui/theme" {
+  name: "migo";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #ffffff;
+  --color-base-200: #f6f6f6;
+  --color-base-300: #e2e2e2;
+  --color-base-content: #000000;
+  --color-primary: #000000;
+  --color-primary-content: #ffffff;
+  --color-secondary: #eeeeee;
+  --color-secondary-content: #000000;
+  --color-accent: #276ef1;
+  --color-accent-content: #ffffff;
+  --color-neutral: #000000;
+  --color-neutral-content: #ffffff;
+  --color-info: #276ef1;
+  --color-info-content: #ffffff;
+  --color-success: #05944f;
+  --color-success-content: #ffffff;
+  --color-warning: #ffc043;
+  --color-warning-content: #000000;
+  --color-error: #e11900;
+  --color-error-content: #ffffff;
+  --radius-selector: 9999px;
+  --radius-field: 0.75rem;
+  --radius-box: 1.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+
+@plugin "daisyui/theme" {
+  name: "migo-dark";
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: #151517;
+  --color-base-200: #0a0a0b;
+  --color-base-300: #26262b;
+  --color-base-content: #f4f4f5;
+  --color-primary: #fafafa;
+  --color-primary-content: #101013;
+  --color-secondary: #1f1f23;
+  --color-secondary-content: #f4f4f5;
+  --color-accent: #5b8cff;
+  --color-accent-content: #ffffff;
+  --color-neutral: #fafafa;
+  --color-neutral-content: #101013;
+  --color-info: #5b8cff;
+  --color-info-content: #ffffff;
+  --color-success: #05944f;
+  --color-success-content: #ffffff;
+  --color-warning: #ffc043;
+  --color-warning-content: #000000;
+  --color-error: #e11900;
+  --color-error-content: #ffffff;
+  --radius-selector: 9999px;
+  --radius-field: 0.75rem;
+  --radius-box: 1.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@theme {
+  --color-bg: #f6f6f6;
+  --color-surface: #ffffff;
+  --color-ink: #000000;
+  --color-muted: #6b6b6b;
+  --color-line: #e2e2e2;
+  --color-primary: #000000;
+  --color-primary-hover: #2b2b2b;
+  --color-on-primary: #ffffff;
+  --color-accent: #276ef1;
+  --color-success: #05944f;
+  --color-warning: #c27c00;
+  --color-danger: #e11900;
+  --color-cream: #eeeeee;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius: 0.75rem;
+}
+
+/* Dark mode — flips every custom token so all components re-skin automatically. */
+.dark {
+  --color-bg: #0a0a0b;
+  --color-surface: #151517;
+  --color-ink: #f4f4f5;
+  --color-muted: #9d9da6;
+  --color-line: #26262b;
+  --color-primary: #fafafa;
+  --color-primary-hover: #d9d9de;
+  --color-on-primary: #101013;
+  --color-accent: #5b8cff;
+  --color-cream: #1f1f23;
+  color-scheme: dark;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html,
+  body,
+  #app {
+    min-height: 100%;
+  }
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+.road-grid {
+  background-color: #000;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Uber/Pathao-style building blocks */
+.pb-safe { padding-bottom: max(0.5rem, env(safe-area-inset-bottom)); }
+.sheet { background: var(--color-surface); border-radius: 1.5rem 1.5rem 0 0; box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.14); }
+.dark .sheet { box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.55); }
+.skeleton { background: linear-gradient(90deg, #ececec 25%, #f7f7f7 50%, #ececec 75%); background-size: 200% 100%; animation: sk 1.2s infinite; border-radius: 0.75rem; }
+.dark .skeleton { background: linear-gradient(90deg, #1c1c1f 25%, #26262b 50%, #1c1c1f 75%); background-size: 200% 100%; }
+@keyframes sk { to { background-position: -200% 0; } }
+.press { transition: transform 0.12s; }
+.press:active { transform: scale(0.97); }
+
+.cards { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); align-items: start; }
+html { -webkit-text-size-adjust: 100%; }
+body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img, svg { max-width: 100%; }
