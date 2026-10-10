@@ -1,5 +1,5 @@
 import axios, { type AxiosError } from "axios";
-
+ 
 const trim = (u: string) => u.replace(/\/+$/, "");
 export const API_ROOT = trim(process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:5000");
 export const APP_URL = trim(process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000");
