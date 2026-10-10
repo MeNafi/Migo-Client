@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-
+ 
 const COOKIE = "migo_access_token";
 const protectedPrefixes = ["/dashboard", "/find-ride", "/rides", "/history", "/messages", "/payments", "/profile", "/commuter", "/admin", "/routes", "/safety"];
  
