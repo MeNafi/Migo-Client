@@ -3,3 +3,4 @@ export const metadata: Metadata = { title: "History", robots: { index: false, fo
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;
 }
+ 
