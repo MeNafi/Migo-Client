@@ -29,56 +29,37 @@ Migo connects passengers with verified commuters traveling along similar routes 
 
 ---
 
-## 📌 Table of Contents
+## 🚀 Overview
 
-- [Overview](#-overview)
-- [Core Features](#-core-features)
-- [Technology Stack](#️-technology-stack)
-- [System Architecture](#-system-architecture)
-- [User Roles](#-user-roles--permissions)
-- [Application Routes](#-application-routes)
-- [Brand & Design System](#-brand--design-system)
-- [API Integration](#-api-integration)
-- [Authentication & Security](#-authentication--security)
-- [Real-Time Features](#-real-time-features)
-- [Payment Integration](#-payment-integration)
-- [Error Handling & Validation](#-error-handling--validation)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Environment Variables](#-environment-variables)
-- [Development Scripts](#-development-scripts)
-- [API Documentation](#-api-documentation)
-- [Testing & Quality](#-testing--quality)
-- [Production Deployment](#-production-deployment)
-- [Related Resources](#-related-resources)
+Migo Client is the frontend application for the Migo daily ride-sharing platform, built with Next.js App Router and TypeScript. It delivers a responsive, role-based experience with reusable components, centralized API integration, and structured error handling.
+
+### 🎯 Product Goals & Key Highlights
+
+| 🚀 Product Goals | ✨ Key Highlights |
+|:---|:---|
+| 🛣️ Simplify daily commuting with route-based ride discovery. | 📱 Modern, responsive UI across all devices. |
+| 🤝 Match passengers with commuters and available seats. | 👥 Role-based passenger, commuter, and admin dashboards. |
+| 📅 Manage recurring routes and ride requests. | 🔗 Centralized, type-safe API integration. |
+| 💰 Ensure transparent ride-sharing costs. | ✅ Form validation and user-friendly error feedback. |
+| 🛡️ Build trust with verification, ratings, OTP, and safety features. | ⚡ Real-time ride updates, location sharing, and messaging support. |
+| 💳 Enable secure SSLCommerz online payments. | 🔐 Secure payment redirects and result handling. |
+| 🎨 Deliver a consistent cross-device experience. | 🧩 Reusable components and consistent design tokens. |
 
 ---
 
-## 🚀 Overview
+## 📌 Table of Contents
 
-Migo Client is the frontend application for the Migo daily ride-sharing platform. It provides an intuitive interface for passengers, commuters, and administrators to interact with the Migo backend API.
+| 📚 Section | 📚 Section |
+|:---|:---|
+| 📌 Overview & Core Features | 🛠️ Technology Stack & Architecture |
+| 👥 User Roles & Application Routes | 🎨 Brand & Design System |
+| 🔗 API Integration & Documentation | 🔐 Authentication & Security |
+| ⚡ Real-Time Features | 💳 Payment Integration |
+| ✅ Error Handling & Validation | 📂 Project Structure |
+| 🚀 Getting Started | ⚙️ Environment Variables & Scripts |
+| 🧪 Testing & Quality | 🌐 Production Deployment |
+| 📖 Related Resources | 📋 API Documentation |
 
-The application is built with Next.js App Router and TypeScript, with a reusable component architecture, responsive layouts, centralized API communication, role-aware navigation, and structured error handling.
-
-### Product Goals
-
-- Simplify everyday commuting through route-based ride discovery.
-- Help passengers find compatible commuters and request available seats.
-- Enable commuters to publish recurring routes and manage ride requests.
-- Make shared transportation costs transparent before payment.
-- Improve trust through commuter verification, ratings, OTP confirmation, and safety features.
-- Provide secure online payment experiences through SSLCommerz.
-- Deliver a consistent experience across mobile, tablet, laptop, and desktop.
-
-### Key Highlights
-
-- Modern, responsive user interface.
-- Role-based passenger, commuter, and admin dashboards.
-- Typed API integration with centralized request handling.
-- Form validation and actionable user feedback.
-- Real-time ride updates, location sharing, and messaging support.
-- Secure payment redirection and payment-result handling.
-- Consistent design tokens and reusable UI components.
 
 ---
 
