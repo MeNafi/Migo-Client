@@ -4,7 +4,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { getSocket } from "@/lib/migo/socket";
 
 const EVENTS = ["ride:update", "ride:status", "ride:location", "location:update", "message:new", "chat:message", "notification:new", "notification"];
-
+ 
 /**
  * Joins `rooms` and refetches `keys` whenever the server pushes an event.
  * Returns `live` — callers slow their polling down while the socket is connected.
