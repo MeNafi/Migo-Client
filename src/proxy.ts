@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
  
 const COOKIE = "migo_access_token";
 const protectedPrefixes = ["/dashboard", "/find-ride", "/rides", "/history", "/messages", "/payments", "/profile", "/commuter", "/admin", "/routes", "/safety"];
- 
+  
 function decode(token: string): { role?: string; exp?: number } | null {
   try {
     const b = token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/");
