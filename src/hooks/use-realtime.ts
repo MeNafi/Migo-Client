@@ -8,7 +8,7 @@ const EVENTS = ["ride:update", "ride:status", "ride:location", "location:update"
 /**
  * Joins `rooms` and refetches `keys` whenever the server pushes an event.
  * Returns `live` — callers slow their polling down while the socket is connected.
- */
+ */ 
 export function useRealtime(rooms: string[], keys: any[][]) {
   const qc = useQueryClient();
   const [live, setLive] = useState(false);
