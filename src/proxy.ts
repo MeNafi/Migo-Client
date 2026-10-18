@@ -10,7 +10,7 @@ function decode(token: string): { role?: string; exp?: number } | null {
   } catch { return null; }
 }
 const homeFor = (role?: string) => (role === "ADMIN" || role === "SUPER_ADMIN" ? "/admin" : role === "COMMUTER" ? "/commuter" : "/find-ride");
-
+ 
 /** JWT gate: needs a token, rejects expired ones, and keeps each role inside its own area. */
 export function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
