@@ -27,7 +27,7 @@ const readLocal = (): SavedLocation[] => {
   } catch {
     return [];
   }
-};
+}; 
 
 /** Saved places — stored in backend preferences; falls back to this device if the API drops the key. */
 function useSavedLocations() {
