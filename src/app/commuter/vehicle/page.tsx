@@ -13,7 +13,7 @@ import { vehicleService } from "@/lib/migo/services";
 
 type Form = z.infer<typeof vehicleSchema>;
 const blank: Form = { type: "CAR", make: "", model: "", color: "", registrationNo: "", year: 2020, seats: 3 };
-
+ 
 export default function Vehicle() {
   const q = useData(["vehicles"], vehicleService.list);
   const { register, handleSubmit, reset, formState: { errors } } = useForm<Form>({ resolver: zodResolver(vehicleSchema), defaultValues: blank });
